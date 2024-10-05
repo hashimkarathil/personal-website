@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about page</title>
+    <link rel="stylesheet" href="Aboutpage.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar" style="display: none;">
+            <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutpage.html">About Us</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Hashim Karathil</a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="Aboutpage.html">About Us</a></li>
+            <li class="hideOnMobile"><a href="Portfolio.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
+            <li class="showside" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <main class="about-section">
+        <section class="about-header">
+            <h1>About Us</h1>
+            <p>Welcome to Hashim Karathil’s personal website! Learn more about our story and what we do.</p>
+        </section>
+
+        <section class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>
+                    Hashim Karathil is dedicated to providing creative, innovative, and visually appealing content for various
+                    digital platforms. Our journey started with a passion for web development and design, and we've grown into
+                    a brand that delivers quality and aesthetics. Whether it's building websites or designing portfolios, we
+                    bring ideas to life in the digital world.
+                </p>
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to help individuals and businesses create a strong digital presence through beautiful and
+                    functional designs. We believe that good design is good business, and we strive to make every project a
+                    success by understanding our clients' needs and providing tailored solutions.
+                </p>
+            </div>
+            <div class="about-images">
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image 1">
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image 2">
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image 3">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hashim Karathil. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,20 +1,18 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added for better layout control */
+    box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh; /* Make the body at least as tall as the viewport */
-    display: flex; /* Make the body a flex container */
-    flex-direction: column; /* Arrange content in a column */
-    justify-content: space-between; /* Push footer to the bottom */
-    background-image: url(Hashi.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+
 
 nav {
     background-color: rgb(211, 211, 211);
@@ -51,10 +49,6 @@ nav li:first-child {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.showside {
-    display: none;
-}
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -79,26 +73,100 @@ nav li:first-child {
     width: 100%;
 }
 
+.showside {
+    display: none;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
-    width: 100%;
 }
 
-@media(max-width: 800px) {
+/* Portfolio Section */
+.portfolio {
+    padding: 2rem;
+    text-align: center;
+}
+
+.portfolio h1 {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-item h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.portfolio-item p {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
     .hideOnMobile {
         display: none;
     }
+
     .showside {
         display: block;
     }
 }
 
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
 @media(max-width: 400px) {
     .sidebar {
         width: 100%;
     }
 }
+

@@ -1,21 +1,16 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added for better layout control */
+    box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh; /* Make the body at least as tall as the viewport */
-    display: flex; /* Make the body a flex container */
-    flex-direction: column; /* Arrange content in a column */
-    justify-content: space-between; /* Push footer to the bottom */
-    background-image: url(Hashi.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 nav {
     background-color: rgb(211, 211, 211);
     box-shadow: 3px 3px 5px black;
@@ -51,10 +46,10 @@ nav li:first-child {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .showside {
     display: none;
 }
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -85,20 +80,86 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
-    width: 100%;
 }
 
-@media(max-width: 800px) {
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #333;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
     .hideOnMobile {
         display: none;
     }
+
     .showside {
         display: block;
     }
 }
-
 @media(max-width: 400px) {
     .sidebar {
         width: 100%;
     }
 }
+
